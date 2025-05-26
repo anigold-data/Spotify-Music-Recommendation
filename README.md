@@ -17,23 +17,23 @@ The analysis centers on several critical audio features and metadata:
 
 ### Audio Features:
 
-Acousticness - Measure of whether a track is acoustic (0.0 to 1.0)
-Danceability - How suitable a track is for dancing (0.0 to 1.0)
-Energy - Perceptual measure of intensity and power (0.0 to 1.0)
-Instrumentalness - Predicts whether a track contains vocals (0.0 to 1.0)
-Liveness - Detects presence of audience in recording (0.0 to 1.0)
-Speechiness - Detects presence of spoken words (0.0 to 1.0)
-Valence - Musical positivity/emotional tone (0.0 to 1.0)
-Tempo - Overall estimated tempo in beats per minute
+- Acousticness - Measure of whether a track is acoustic (0.0 to 1.0)
+- Danceability - How suitable a track is for dancing (0.0 to 1.0)
+- Energy - Perceptual measure of intensity and power (0.0 to 1.0)
+- Instrumentalness - Predicts whether a track contains vocals (0.0 to 1.0)
+- Liveness - Detects presence of audience in recording (0.0 to 1.0)
+- Speechiness - Detects presence of spoken words (0.0 to 1.0)
+- Valence - Musical positivity/emotional tone (0.0 to 1.0)
+- Tempo - Overall estimated tempo in beats per minute
 
 
 ### Metadata Fields:
 
-Year - Release year (1921-2020)
-Popularity - Popularity score metric
-Mode - Musical mode (major/minor)
-Key - Musical key signature
-Genre - Predicted/assigned genre classifications
+- Year - Release year (1921-2020)
+- Popularity - Popularity score metric
+- Mode - Musical mode (major/minor)
+- Key - Musical key signature
+- Genre - Predicted/assigned genre classifications
 
 ---
 
