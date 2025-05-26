@@ -4,11 +4,11 @@
 
 ## Dataset Structure
 This comprehensive music analysis utilizes four primary datasets to explore musical trends, genre classification, and recommendation systems:
-data.csv - The main dataset containing comprehensive music information with predicted genre classifications mapped to individual songs, serving as the foundation for recommendation algorithms.
-data_by_artists.csv - Artist-level aggregated data providing insights into performer statistics, popularity metrics, and characteristic audio features across different artists.
-data_genres.csv - Contains all genres with defined values for audio features. Clustering analysis was performed on this dataset to select representative genres for each cluster, leveraging Euclidean distances to find the closest genre matches in PCA space.
-data_w_genres.csv - Contains artist records with audio features and applicable genres for each entry. Each record represents a song (though song names were not provided as field information), enabling genre-based analysis and classification.
-data_by_year.csv - Defines audio features aggregated by year from 1921 to 2020, including popularity metrics, mode, year, and key information for temporal trend analysis.
+- data.csv - The main dataset containing comprehensive music information with predicted genre classifications mapped to individual songs, serving as the foundation for recommendation algorithms.
+- data_by_artists.csv - Artist-level aggregated data providing insights into performer statistics, popularity metrics, and characteristic audio features across different artists.
+- data_genres.csv - Contains all genres with defined values for audio features. Clustering analysis was performed on this dataset to select representative genres for each cluster, leveraging Euclidean distances to find the closest genre matches in PCA space.
+- data_w_genres.csv - Contains artist records with audio features and applicable genres for each entry. Each record represents a song (though song names were not provided as field information), enabling genre-based analysis and classification.
+- data_by_year.csv - Defines audio features aggregated by year from 1921 to 2020, including popularity metrics, mode, year, and key information for temporal trend analysis.
 
 ---
 
