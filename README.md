@@ -94,42 +94,41 @@ In this project, five different recommendation systems were implemented to provi
 
 ## Recommendation Systems
 
-1. Content-Based Recommendation Using Song Features
+1. **Content-Based Recommendation Using Song Features**
 The content-based recommendation system has been designed to recommend songs that are sonically similar to a given input song by leveraging the song's audio features.  The recommendation logic calculates the cosine similarity between the feature vector of the selected song and all other songs in the dataset. Based on this similarity score, it ranks and returns the top songs that are closest in sound and style to the input song. This system is based on the intrinsic qualities of the music itself rather than external metadata and as such will be vital for personalized recommendations. However, it can also lead to limited variety, since the recommendations tend to be acoustically very similar to the selected song. Moreover, it does not take user behavior or song popularity into account, which may result in less relevant suggestions for general audiences. 
 
-2. Genre-Based Recommendation
+2. **Genre-Based Recommendation**
 The adopted genre-based recommendation system focuses on suggesting songs within a specified music genre. It works by filtering the dataset to include only those songs that belong to the chosen genre and then sorting them by popularity to select the top entries. This system leverages the genre labels assigned during preprocessing, which were obtained by clustering audio features and assigning representative genres to each cluster. This approach is useful for listeners who are interested in discovering or sticking to a particular genre. It offers quick access to the most popular songs in any given category, making it ideal for casual users or those looking to explore trending tracks. However, it lacks personalization since all users receive the same results for a given genre. Additionally, the approach's effectiveness is limited by the clustering methodology used during preprocessing. The elbow method determined only 10 clusters for genre classification, which appears insufficient to capture the nuanced diversity and sophisticated variations present across the musical landscape. This limitation increases the likelihood of genre misclassification and outliers, potentially leading to recommendations that don't align with users' expectations for their selected genre.
 The system's reliance on popularity-based ranking, while ensuring mainstream appeal, may also overlook hidden gems or emerging artists that could better serve users seeking genre-specific discovery experiences.
 
-3. Hybrid Recommendation System (Content + Popularity)
+3. **Hybrid Recommendation System (Content + Popularity)**
 The hybrid recommendation system combines the strengths of both content-based and popularity-based approaches to produce more balanced and appealing recommendations. It begins by calculating cosine similarity between the input song and others based on audio features. Then, it normalizes each song’s popularity score to a 0–1 scale and combines it with the similarity score using a weighted average formula. This hybrid score ensures that the recommended songs are not only similar in audio profile to the original song but are also among the more popular selections in the dataset. The popularity weight parameter can be adjusted to control the balance between similarity and mainstream appeal. This system is effective for generating recommendations that are both relevant and recognizable. However, the approach's effectiveness relies on precise parameter calibration. Inadequate tuning may result in recommendations that skew heavily toward either popularity or similarity, potentially diminishing the hybrid system's core advantage. Additionally, the reliance on popularity metrics may inadvertently bias recommendations toward established artists, potentially limiting exposure to emerging or niche content that could better serve specific user preferences.
 
-4. Mood-Based Recommendation System
+4. **Mood-Based Recommendation System**
 The mood-based recommendation system is built to suggest songs based on the listener’s current emotional state. It defines five moods—happy, sad, energetic, calm, and danceable. It uses a combination of audio feature thresholds (e.g., valence, energy, tempo, danceability) to filter songs that match the mood criteria. For instance, happy songs are identified by high valence and energy, while calm songs are selected based on low energy and tempo.<br/>
-
-  **Happy Mood**:
+**Happy Mood**:
 - Valence threshold: 75th percentile (top 25% of valence values)
 - Energy threshold: 60th percentile (top 40% of energy values)
 - Criteria: Songs with valence AND energy above their respective thresholds<br/>
-  **Sad Mood**:
+**Sad Mood**:
 - Valence threshold: 25th percentile (bottom 25% of valence values)
 - Energy threshold: 40th percentile (bottom 40% of energy values)
 - Criteria: Songs with valence AND energy below their respective thresholds<br/>
-  **Energetic Mood**:
+**Energetic Mood**:
 - Energy threshold: 85th percentile (top 15% of energy values)
 - Tempo threshold: 75th percentile (top 25% of tempo values)
 - Criteria: Songs with energy AND tempo above their respective thresholds<br/>
-  **Calm Mood**:
+**Calm Mood**:
 - Energy threshold: 30th percentile (bottom 30% of energy values)
 - Tempo threshold: 40th percentile (bottom 40% of tempo values)
 - Criteria: Songs with energy AND tempo below their respective thresholds<br/>
-  **Danceable Mood**:
+**Danceable Mood**:
 - Danceability threshold: 75th percentile (top 25% of danceability values)
 - Criteria: Songs with danceability above the threshold
 
 This method allows users to explore music that resonates with their mood or activity, making it ideal for emotional and situational listening. It enhances the user experience by offering mood-aligned music without needing explicit song names or genres. However, the thresholds used are rough estimates and might not match how people actually feel about music. The system also treats all users the same way and doesn't learn what each person likes.
 
-5. Era-Based Recommendation System
+5. **Era-Based Recommendation System**
 The era-based recommendation system enables users to discover music from a specific time period by selecting a range of years. The system filters the dataset based on the song release year and sorts the results by popularity. This is particularly useful for listeners interested in nostalgia, historical exploration, or those who want to explore the musical landscape of a particular decade or era. While this system effectively supports time-based exploration, it is entirely dependent on the accuracy and availability of the song release year in the dataset.
 
 ---
