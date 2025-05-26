@@ -107,27 +107,23 @@ The hybrid recommendation system combines the strengths of both content-based an
 4. Mood-Based Recommendation System
 The mood-based recommendation system is built to suggest songs based on the listener’s current emotional state. It defines five moods—happy, sad, energetic, calm, and danceable and uses a combination of audio feature thresholds (e.g., valence, energy, tempo, danceability) to filter songs that match the mood criteria. For instance, happy songs are identified by high valence and energy, while calm songs are selected based on low energy and tempo.
 
-Happy Mood:
+  **Happy Mood**:
 - Valence threshold: 75th percentile (top 25% of valence values)
 - Energy threshold: 60th percentile (top 40% of energy values)
 - Criteria: Songs with valence AND energy above their respective thresholds
-
-Sad Mood:
+  **Sad Mood**:
 - Valence threshold: 25th percentile (bottom 25% of valence values)
 - Energy threshold: 40th percentile (bottom 40% of energy values)
 - Criteria: Songs with valence AND energy below their respective thresholds
-
-Energetic Mood:
+  **Energetic Mood**:
 - Energy threshold: 85th percentile (top 15% of energy values)
 - Tempo threshold: 75th percentile (top 25% of tempo values)
 - Criteria: Songs with energy AND tempo above their respective thresholds
-
-Calm Mood:
+  **Calm Mood**:
 - Energy threshold: 30th percentile (bottom 30% of energy values)
 - Tempo threshold: 40th percentile (bottom 40% of tempo values)
 - Criteria: Songs with energy AND tempo below their respective thresholds
-
-Danceable Mood:
+  **Danceable Mood**:
 - Danceability threshold: 75th percentile (top 25% of danceability values)
 - Criteria: Songs with danceability above the threshold
 
