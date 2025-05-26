@@ -105,24 +105,24 @@ The system's reliance on popularity-based ranking, while ensuring mainstream app
 The hybrid recommendation system combines the strengths of both content-based and popularity-based approaches to produce more balanced and appealing recommendations. It begins by calculating cosine similarity between the input song and others based on audio features. Then, it normalizes each song’s popularity score to a 0–1 scale and combines it with the similarity score using a weighted average formula. This hybrid score ensures that the recommended songs are not only similar in audio profile to the original song but are also among the more popular selections in the dataset. The popularity weight parameter can be adjusted to control the balance between similarity and mainstream appeal. This system is effective for generating recommendations that are both relevant and recognizable. However, the approach's effectiveness relies on precise parameter calibration. Inadequate tuning may result in recommendations that skew heavily toward either popularity or similarity, potentially diminishing the hybrid system's core advantage. Additionally, the reliance on popularity metrics may inadvertently bias recommendations toward established artists, potentially limiting exposure to emerging or niche content that could better serve specific user preferences.
 
 4. Mood-Based Recommendation System
-The mood-based recommendation system is built to suggest songs based on the listener’s current emotional state. It defines five moods—happy, sad, energetic, calm, and danceable. It uses a combination of audio feature thresholds (e.g., valence, energy, tempo, danceability) to filter songs that match the mood criteria. For instance, happy songs are identified by high valence and energy, while calm songs are selected based on low energy and tempo.
+The mood-based recommendation system is built to suggest songs based on the listener’s current emotional state. It defines five moods—happy, sad, energetic, calm, and danceable. It uses a combination of audio feature thresholds (e.g., valence, energy, tempo, danceability) to filter songs that match the mood criteria. For instance, happy songs are identified by high valence and energy, while calm songs are selected based on low energy and tempo.<br/>
 
   **Happy Mood**:
 - Valence threshold: 75th percentile (top 25% of valence values)
 - Energy threshold: 60th percentile (top 40% of energy values)
-- Criteria: Songs with valence AND energy above their respective thresholds\
+- Criteria: Songs with valence AND energy above their respective thresholds<br/>
   **Sad Mood**:
 - Valence threshold: 25th percentile (bottom 25% of valence values)
 - Energy threshold: 40th percentile (bottom 40% of energy values)
-- Criteria: Songs with valence AND energy below their respective thresholds\
+- Criteria: Songs with valence AND energy below their respective thresholds<br/>
   **Energetic Mood**:
 - Energy threshold: 85th percentile (top 15% of energy values)
 - Tempo threshold: 75th percentile (top 25% of tempo values)
-- Criteria: Songs with energy AND tempo above their respective thresholds\
+- Criteria: Songs with energy AND tempo above their respective thresholds<br/>
   **Calm Mood**:
 - Energy threshold: 30th percentile (bottom 30% of energy values)
 - Tempo threshold: 40th percentile (bottom 40% of tempo values)
-- Criteria: Songs with energy AND tempo below their respective thresholds\
+- Criteria: Songs with energy AND tempo below their respective thresholds<br/>
   **Danceable Mood**:
 - Danceability threshold: 75th percentile (top 25% of danceability values)
 - Criteria: Songs with danceability above the threshold
