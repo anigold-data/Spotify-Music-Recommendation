@@ -108,65 +108,69 @@ The hybrid recommendation system combines the strengths of both content-based an
 The mood-based recommendation system is built to suggest songs based on the listener’s current emotional state. It defines five moods—happy, sad, energetic, calm, and danceable and uses a combination of audio feature thresholds (e.g., valence, energy, tempo, danceability) to filter songs that match the mood criteria. For instance, happy songs are identified by high valence and energy, while calm songs are selected based on low energy and tempo.
 
 Happy Mood:
-Valence threshold: 75th percentile (top 25% of valence values)
-Energy threshold: 60th percentile (top 40% of energy values)
-Criteria: Songs with valence AND energy above their respective thresholds
+- Valence threshold: 75th percentile (top 25% of valence values)
+- Energy threshold: 60th percentile (top 40% of energy values)
+- Criteria: Songs with valence AND energy above their respective thresholds
 
 Sad Mood:
-Valence threshold: 25th percentile (bottom 25% of valence values)
-Energy threshold: 40th percentile (bottom 40% of energy values)
-Criteria: Songs with valence AND energy below their respective thresholds
+- Valence threshold: 25th percentile (bottom 25% of valence values)
+- Energy threshold: 40th percentile (bottom 40% of energy values)
+- Criteria: Songs with valence AND energy below their respective thresholds
 
 Energetic Mood:
-Energy threshold: 85th percentile (top 15% of energy values)
-Tempo threshold: 75th percentile (top 25% of tempo values)
-Criteria: Songs with energy AND tempo above their respective thresholds
+- Energy threshold: 85th percentile (top 15% of energy values)
+- Tempo threshold: 75th percentile (top 25% of tempo values)
+- Criteria: Songs with energy AND tempo above their respective thresholds
 
 Calm Mood:
-Energy threshold: 30th percentile (bottom 30% of energy values)
-Tempo threshold: 40th percentile (bottom 40% of tempo values)
-Criteria: Songs with energy AND tempo below their respective thresholds
+- Energy threshold: 30th percentile (bottom 30% of energy values)
+- Tempo threshold: 40th percentile (bottom 40% of tempo values)
+- Criteria: Songs with energy AND tempo below their respective thresholds
 
 Danceable Mood:
-Danceability threshold: 75th percentile (top 25% of danceability values)
-Criteria: Songs with danceability above the threshold
+- Danceability threshold: 75th percentile (top 25% of danceability values)
+- Criteria: Songs with danceability above the threshold
 
 This method allows users to explore music that resonates with their mood or activity, making it ideal for emotional and situational listening. It enhances the user experience by offering mood-aligned music without needing explicit song names or genres. However, the thresholds used are rough estimates and might not match how people actually feel about music. The system also treats all users the same way and doesn't learn what each person likes.
 
 5. Era-Based Recommendation System
 The era-based recommendation system enables users to discover music from a specific time period by selecting a range of years. The system filters the dataset based on the song release year and sorts the results by popularity. This is particularly useful for listeners interested in nostalgia, historical exploration, or those who want to explore the musical landscape of a particular decade or era. While this system effectively supports time-based exploration, it is entirely dependent on the accuracy and availability of the song release year in the dataset.
 
-UNIFIED MUSIC RECOMMENDATION TOOL
-This helps users get song suggestions based on different types of input — such as a specific song, genre, mood, or time period. Depending on what you enter, it uses different methods behind the scenes to give the best recommendations.
+---
 
+## Unified Music Recommendation Tool
+This helps users get song suggestions based on different types of input — such as a specific song, genre, mood, or time period. Depending on what you enter, it uses different methods behind the scenes to give the best recommendations.
 The function supports four main types of input:
 Song – You give the name of a song you like.
 Genre – You enter a music genre like pop, hip-hop, or jazz.
 Mood – You choose a mood like happy, sad, calm, energetic, or danceable.
 Era – You provide a time range (like 2000–2010) to get songs from that period.
 
-Evolution of Music Features over Decades
+---
+
+## Evolution of Music Features over Decades
 This focused on visualizing how music characteristics have changed over time based on the analyzed data. Specifically, it:
 
 - Groups songs by decade (1980s, 1990s, 2000s, etc.)
 - Calculates the average values for 7 audio features (like energy, danceability, valence) for each decade
 - Creates a radar chart that shows these feature patterns as  polygons, with each decade represented by a different colored shape
 
-Acousticness - Shows a dramatic decline over time, with 1920s music being highly acoustic (around 0.8) and steadily decreasing to about 0.6 by the 1950s, reflecting the shift from acoustic instruments to electric/amplified music.
-Valence - Remained relatively stable across decades, with all eras maintaining moderate to high valence levels (around 0.5-0.6), suggesting consistent emotional tone in popular music.
-Energy - Gradually increased from the 1920s to 1950s, indicating music became more energetic and dynamic over time.
-Danceability - Shows steady growth, particularly noticeable from the 1940s to 1950s, likely reflecting the rise of swing, big band, and early rock influences.
-Speechiness, Liveness, and Instrumentalness - All remained relatively low and stable across decades, indicating consistent focus on musical rather than spoken content, studio recordings, and vocal-centered compositions.
+- Acousticness - Shows a dramatic decline over time, with 1920s music being highly acoustic (around 0.8) and steadily decreasing to about 0.6 by the 1950s, reflecting the shift from acoustic instruments to electric/amplified music.
+- Valence - Remained relatively stable across decades, with all eras maintaining moderate to high valence levels (around 0.5-0.6), suggesting consistent emotional tone in popular music.
+- Energy - Gradually increased from the 1920s to 1950s, indicating music became more energetic and dynamic over time.
+- Danceability - Shows steady growth, particularly noticeable from the 1940s to 1950s, likely reflecting the rise of swing, big band, and early rock influences.
+- Speechiness, Liveness, and Instrumentalness - All remained relatively low and stable across decades, indicating consistent focus on musical rather than spoken content, studio recordings, and vocal-centered compositions.
 In summary the chart revealed music's transition from acoustic, folk-influenced styles of the 1920s toward more energetic, danceable, and electronically-enhanced music by the 1950s.
 
-Evolution of Music popularity over the century
+---
+
+## Evolution of Music popularity over the century
 This chart shows the evolution of music popularity metrics over nearly a century (1920-2020). Here are the observable key patterns for three distinct eras:
+- 1920s-1940s: Low, Stable Period - Popularity scores remained very low (under 10) with minor fluctuations, likely reflecting limited recording technology, distribution methods, and measurement capabilities of the early music industry.
+- 1950s-1960s: The Great Acceleration - A sharp, dramatic increase begins around 1950, with popularity scores jumping from near zero to around 35-40 by the late 1960s. This coincides with the rise of rock and roll, improved recording technology, radio expansion, and the birth of modern popular music.
+- 1970s-2020s: Steady Exponential Growth - Consistent upward trajectory with popularity scores climbing from about 35 to over 60. The growth accelerates notably after 2000, likely reflecting the digital music revolution, streaming platforms, and global music accessibility.
 
-1920s-1940s: Low, Stable Period - Popularity scores remained very low (under 10) with minor fluctuations, likely reflecting limited recording technology, distribution methods, and measurement capabilities of the early music industry.
-1950s-1960s: The Great Acceleration - A sharp, dramatic increase begins around 1950, with popularity scores jumping from near zero to around 35-40 by the late 1960s. This coincides with the rise of rock and roll, improved recording technology, radio expansion, and the birth of modern popular music.
-1970s-2020s: Steady Exponential Growth - Consistent upward trajectory with popularity scores climbing from about 35 to over 60. The growth accelerates notably after 2000, likely reflecting the digital music revolution, streaming platforms, and global music accessibility.
-
-Dataset Shortcomings
+## Dataset Shortcomings
 
 Limited Genre Granularity
 - Only 10 clusters identified through elbow method appears insufficient for capturing musical diversity
@@ -188,7 +192,7 @@ Personalization Gaps
 - No demographic or behavioral data for personalized experiences
 - Limited feedback mechanisms for system improvement
 
-Recommendations for Future Research
+## Recommendations for Future Research
 
 Enhanced Genre Classification
 - Hierarchical Clustering: Implement multi-level genre classification capturing main genres, sub-genres, and micro-genres
