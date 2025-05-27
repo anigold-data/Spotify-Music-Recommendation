@@ -219,8 +219,8 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 
 **❌ Limitations:**
 - Requires precise parameter calibration
-- May bias toward established artists
-- Complex optimization needed
+- May have a bias toward established artists
+- Complex optimisation needed
 
 ### 4. 😊 Mood-Based Recommendation
 
@@ -248,7 +248,7 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 
 **🔍 How it Works:**
 - Filters by year range selection
-- Sorts by popularity within timeframe
+- Sorts by popularity within the timeframe
 - Enables temporal music exploration
 
 **✅ Strengths:**
@@ -271,7 +271,7 @@ def get_recommendations(input_type, input_value, num_recommendations=10):
     - Song: Specific track name
     - Genre: Music category
     - Mood: Emotional state
-    - Era: Time period range
+    - Era: Period range
     """
 ```
 
@@ -385,13 +385,12 @@ pandas >= 1.3.0
 scikit-learn >= 1.0.0
 matplotlib >= 3.5.0
 seaborn >= 0.11.0
-plotly >= 5.0.0
 ```
 
 ### 📥 Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/spotify-music-analysis.git
+git clone https://github.com/anigold-data/Spotify-Music-Recommendation.git
 cd spotify-music-analysis
 
 # Install dependencies
