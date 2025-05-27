@@ -449,8 +449,6 @@ songs = recommender.recommend(
 
 ---
 
-## 🤝 Contributing
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ## 📞 Support
 - 📧 **Email**: [aniwurakehinde@gmail.com](mailto:aniwurakehinde@gmail.com)
