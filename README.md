@@ -449,16 +449,11 @@ songs = recommender.recommend(
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🤝 Contributing
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ## 📞 Support
-- 📧 **Email**: [your.email@example.com](mailto:your.email@example.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/spotify-music-analysis/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/spotify-music-analysis/discussions)
+- 📧 **Email**: [aniwurakehinde@gmail.com](mailto:aniwurakehinde@gmail.com)
 
 ---
 
