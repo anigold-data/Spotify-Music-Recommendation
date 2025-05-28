@@ -22,17 +22,17 @@ A comprehensive music analysis project utilizing Spotify data to explore musical
 - [Future Research](#future-research)
 - [Installation & Usage](#installation--usage)
 
-## 📊 Dataset Overview
+## Dataset Overview
 
 This comprehensive music analysis utilizes **five primary datasets** to explore musical trends, genre classification, and recommendation systems:
 
 | Dataset | Description | Key Features |
 |---------|-------------|--------------|
-| **`data.csv`** | Main dataset with comprehensive music information | 🎯 Predicted genre classifications, recommendation foundation |
-| **`data_by_artists.csv`** | Artist-level aggregated data | 👨‍🎤 Performer statistics, popularity metrics, audio features |
-| **`data_genres.csv`** | Genre definitions with audio feature values | 🎼 Clustering analysis, representative genre selection |
-| **`data_w_genres.csv`** | Artist records with audio features and genres | 🎵 Genre-based analysis and classification |
-| **`data_by_year.csv`** | Temporal data (1921-2020) | 📅 Year-based trends, popularity evolution |
+| **`data.csv`** | Main dataset with comprehensive music information |  Predicted genre classifications, recommendation foundation |
+| **`data_by_artists.csv`** | Artist-level aggregated data | Performer statistics, popularity metrics, audio features |
+| **`data_genres.csv`** | Genre definitions with audio feature values | Clustering analysis, representative genre selection |
+| **`data_w_genres.csv`** | Artist records with audio features and genres | Genre-based analysis and classification |
+| **`data_by_year.csv`** | Temporal data (1921-2020) | Year-based trends, popularity evolution |
 
 ### 📁 Dataset Structure
 ```
@@ -46,7 +46,7 @@ This comprehensive music analysis utilizes **five primary datasets** to explore 
 └── 📈 analysis/
 ```
 
-## 🎼 Audio Features
+## Audio Features
 
 The analysis focuses on **8 critical audio features** and metadata fields:
 
@@ -71,40 +71,40 @@ The analysis focuses on **8 critical audio features** and metadata fields:
 - **Key**: Musical key signature
 - **Genre**: Predicted/assigned classifications
 
-## 📈 Data Analysis
+## Data Analysis
 
 ### 🎯 Feature Distribution
 
 **Key Insights:**
-- 📊 **Bimodal Features**: Acousticness and Instrumentalness show clear categorical divisions
-- 📈 **Normal Distribution**: Danceability and Energy follow standard distributions
-- 🎵 **Vocal Dominance**: Majority of tracks contain vocals (low instrumentalness)
-- 🔊 **High Volume Mastering**: Most songs are mastered at high volumes
-- 🌈 **Emotional Range**: Valence shows uniform distribution across emotional spectrum
+- **Bimodal Features**: Acousticness and Instrumentalness show clear categorical divisions
+- **Normal Distribution**: Danceability and Energy follow standard distributions
+- **Vocal Dominance**: Majority of tracks contain vocals (low instrumentalness)
+- **High Volume Mastering**: Most songs are mastered at high volumes
+- **Emotional Range**: Valence shows uniform distribution across emotional spectrum
 
 > **💡 Application**: These characteristics enable mood-based recommendations, energy-focused playlists, and vocal/instrumental filtering.
 
-### 🔗 Correlation Analysis
+### Correlation Analysis
 
-#### 🔥 Strong Positive Correlations
+#### Strong Positive Correlations
 | Feature Pair | Correlation | Insight |
 |--------------|-------------|---------|
 | **Energy ↔ Loudness** | 0.78 | 🔊 Louder songs feel more energetic |
 | **Danceability ↔ Valence** | 0.56 | 💃 Happy songs are more danceable |
 | **Energy ↔ Valence** | 0.35 | ⚡ High-energy songs often sound happier |
 
-#### ❄️ Strong Negative Correlations
+#### Strong Negative Correlations
 | Feature Pair | Correlation | Insight |
 |--------------|-------------|---------|
 | **Acousticness ↔ Energy** | -0.75 | 🎸 Acoustic tracks are less energetic |
 | **Acousticness ↔ Loudness** | -0.56 | 🔇 Acoustic songs are generally quieter |
 | **Instrumentalness ↔ Loudness** | -0.41 | 🎺 Instrumental tracks tend to be softer |
 
-#### 🎯 Unique Features
+#### Unique Features
 - **Liveness**, **Speechiness**, and **Tempo** show weak correlations
 - These provide unique, independent information for recommendation systems
 
-### 📅 Trend Analysis Over Time (1925-2020)
+### Trend Analysis Over Time (1925-2020)
 
 #### 📈 Increasing Trends
 - **🕺 Danceability**: Steady rise from 1970s (disco, EDM, rhythm-focused pop)
@@ -120,9 +120,9 @@ The analysis focuses on **8 critical audio features** and metadata fields:
 
 > **🎭 Cultural Impact**: These trends reflect broader cultural shifts, technological advances, and changing listener preferences over nearly a century.
 
-### 🏆 Popularity Analysis
+### Popularity Analysis
 
-#### 📊 Key Findings
+#### Key Findings
 - **🎵 Valence vs Popularity**: No clear linear relationship
   - Both happy (high valence) and moody (low valence) songs achieve popularity
   - Emotional tone doesn't strictly determine mainstream success
@@ -131,22 +131,22 @@ The analysis focuses on **8 critical audio features** and metadata fields:
   - Explicit songs show higher median popularity
   - Suggests explicit content may attract larger audiences
 
-## 🎯 Genre Classification Strategy
+## Genre Classification Strategy
 
 ### 🧠 Representative Genre Mapping via Centroid Proximity (RGCP)
 
 Before building recommendation systems, a sophisticated **data-driven genre assignment strategy** was developed to label songs lacking genre information.
 
-#### 🔄 Three-Step Process
+#### Three-Step Process
 
 ```mermaid
 graph TD
-    A[🎼 Genre Audio Profiles] --> B[📊 KMeans Clustering]
-    B --> C[🎯 PCA Dimensionality Reduction]
-    C --> D[📍 Centroid Calculation]
-    D --> E[📏 Euclidean Distance Measurement]
-    E --> F[🏷️ Representative Genre Selection]
-    F --> G[🎵 Song Genre Assignment]
+    A[Genre Audio Profiles] --> B[KMeans Clustering]
+    B --> C[PCA Dimensionality Reduction]
+    C --> D[Centroid Calculation]
+    D --> E[Euclidean Distance Measurement]
+    E --> F[Representative Genre Selection]
+    F --> G[Song Genre Assignment]
 ```
 
 #### **Step 1: Clustering Genre Audio Profiles**
@@ -166,11 +166,11 @@ graph TD
 
 > **✅ Result**: Successfully enhanced dataset with genre labels based purely on acoustic signatures, enabling downstream recommendation tasks.
 
-## 🎯 Recommendation Systems
+## Recommendation Systems
 
 Five distinct recommendation systems provide tailored music suggestions for different user needs and contexts:
 
-### 1. 🎵 Content-Based Recommendation
+### 1. Content-Based Recommendation
 
 **🔍 How it Works:**
 - Calculates **cosine similarity** between song feature vectors
@@ -187,7 +187,7 @@ Five distinct recommendation systems provide tailored music suggestions for diff
 - No user behavior consideration
 - May miss popular alternatives
 
-### 2. 🎼 Genre-Based Recommendation
+### 2. Genre-Based Recommendation
 
 **🔍 How it Works:**
 - Filters dataset by specified genre
@@ -205,7 +205,7 @@ Five distinct recommendation systems provide tailored music suggestions for diff
 - Risk of genre misclassification
 - Overlooks emerging artists
 
-### 3. 🔄 Hybrid Recommendation (Content + Popularity)
+### 3. Hybrid Recommendation (Content + Popularity)
 
 **🔍 How it Works:**
 ```python
@@ -222,9 +222,9 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 - May have a bias toward established artists
 - Complex optimisation needed
 
-### 4. 😊 Mood-Based Recommendation
+### 4. Mood-Based Recommendation
 
-**🔍 Mood Definitions:**
+**Mood Definitions:**
 
 | Mood | Criteria | Thresholds |
 |------|----------|------------|
@@ -244,9 +244,9 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 - No personalization learning
 - May not match individual perceptions
 
-### 5. 📅 Era-Based Recommendation
+### 5. Era-Based Recommendation
 
-**🔍 How it Works:**
+**How it Works:**
 - Filters by year range selection
 - Sorts by popularity within the timeframe
 - Enables temporal music exploration
@@ -261,9 +261,9 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 - No feature-based similarity
 - Limited to temporal filtering
 
-### 🛠️ Unified Music Recommendation Tool
+### Unified Music Recommendation Tool
 
-**🎯 Multi-Input Interface:**
+**Multi-Input Interface:**
 ```python
 def get_recommendations(input_type, input_value, num_recommendations=10):
     """
@@ -275,9 +275,9 @@ def get_recommendations(input_type, input_value, num_recommendations=10):
     """
 ```
 
-## 📊 Visualization Features
+## Visualization Features
 
-### 🕸️ Evolution of Music Features over Decades
+### Evolution of Music Features over Decades
 
 **Radar Chart Analysis** showing feature changes across decades:
 
@@ -311,29 +311,29 @@ def get_recommendations(input_type, input_value, num_recommendations=10):
 
 ## ⚠️ Dataset Limitations
 
-### 🎼 Limited Genre Granularity
+### Limited Genre Granularity
 - ❌ Only **10 clusters** identified (insufficient musical diversity)
 - ❌ Risk of genre misclassification and outliers
 - ❌ Lack of hierarchical genre structures
 
-### 📝 Missing Critical Information
+### Missing Critical Information
 - ❌ Song titles absent from `data_w_genres.csv`
 - ❌ Incomplete artist metadata across datasets
 - ❌ Limited temporal granularity in historical periods
 
-### 🎯 Threshold Limitations
+### Threshold Limitations
 - ❌ Mood classification relies on **heuristic percentile-based thresholds**
 - ❌ Fixed thresholds ignore individual/cultural differences
 - ❌ No validation against actual user preferences
 
-### 👤 Personalization Gaps
+### Personalization Gaps
 - ❌ No user preference integration
 - ❌ Missing demographic/behavioral data
 - ❌ Limited feedback mechanisms
 
-## 🚀 Future Research Recommendations
+## Future Research
 
-### 🔬 Enhanced Genre Classification
+### Enhanced Genre Classification
 
 #### 🌳 Hierarchical Clustering
 ```
@@ -347,7 +347,7 @@ Main Genres → Sub-genres → Micro-genres
 - **Expert Validation**: Musicologist input for accuracy
 - **Cross-Dataset Validation**: Multiple database verification
 
-### 🎯 Improved Recommendation Systems
+### Improved Recommendation Systems
 
 #### 👤 User Profiling
 - **Demographics**: Age, location, cultural background
@@ -364,7 +364,7 @@ Main Genres → Sub-genres → Micro-genres
 - **Implicit Feedback**: Skip rates, replay counts
 - **A/B Testing**: Systematic approach comparison
 
-### ⚙️ Technical Improvements
+### Technical Improvements
 
 #### 📈 Scalability Solutions
 - **Distributed Computing**: Large-scale analysis capability
@@ -396,23 +396,6 @@ cd spotify-music-analysis
 # Install dependencies
 pip install -r requirements.txt
 
-# Run analysis
-python main.py
-```
-
-### 🎯 Quick Start
-```python
-from music_recommender import UnifiedRecommendationSystem
-
-# Initialize system
-recommender = UnifiedRecommendationSystem()
-
-# Get recommendations
-songs = recommender.recommend(
-    input_type="mood",
-    input_value="happy",
-    num_recommendations=10
-)
 ```
 
 ## 📊 Repository Structure
