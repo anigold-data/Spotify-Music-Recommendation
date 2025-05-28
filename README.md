@@ -20,7 +20,7 @@ A comprehensive music analysis project utilizing Spotify data to explore musical
 - [Visualization Features](#visualization-features)
 - [Dataset Limitations](#dataset-limitations)
 - [Future Research](#future-research)
-- [Installation & Usage](#installation--usage)
+- [Installation & Usage](#installation-&-usage)
 
 ## Dataset Overview
 
