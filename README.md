@@ -20,7 +20,7 @@ A comprehensive music analysis project utilizing Spotify data to explore musical
 - [Visualization Features](#visualization-features)
 - [Dataset Limitations](#dataset-limitations)
 - [Future Research](#future-research)
-- [Installation & Usage](#installation-&-usage)
+- [Installation](#installation)
 
 ## Dataset Overview
 
@@ -420,13 +420,11 @@ pip install -r requirements.txt
 │   ├── 📓 02_genre_classification.ipynb
 │   ├── 📓 03_recommendation_systems.ipynb
 │   └── 📓 04_visualization_analysis.ipynb
-├── 📁 results/
-│   ├── 📈 correlation_matrix.png
-│   ├── 📊 feature_evolution.png
-│   └── 📉 popularity_trends.png
-└── 📁 tests/
-    ├── 🧪 test_recommendations.py
-    └── 🧪 test_classification.py
+|── 📁 results/
+    ├── 📈 correlation_matrix.png
+    ├── 📊 feature_evolution.png
+    └── 📉 popularity_trends.png
+
 ```
 
 ---
