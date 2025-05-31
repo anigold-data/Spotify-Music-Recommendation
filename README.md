@@ -1,4 +1,4 @@
-# 🎵 Spotify Music Analysis & Recommendation System
+# Spotify Music Analysis & Recommendation System
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Pandas](https://img.shields.io/badge/Pandas-Latest-green.svg)](https://pandas.pydata.org)
@@ -24,7 +24,7 @@ A comprehensive music analysis project utilizing Spotify data to explore musical
 
 ## Dataset Overview
 
-This comprehensive music analysis utilizes **five primary datasets** to explore musical trends, genre classification, and recommendation systems:
+This comprehensive music analysis uses **five primary datasets** to explore musical trends, genre classification, and recommendation systems:
 
 | Dataset | Description | Key Features |
 |---------|-------------|--------------|
@@ -38,12 +38,12 @@ This comprehensive music analysis utilizes **five primary datasets** to explore 
 ```
 📁 spotify-music-analysis/
 ├── 📊 data/
-│   ├── 📄 data.csv (Main dataset)
-│   ├── 📄 data_by_artists.csv (Artist metrics)
-│   ├── 📄 data_genres.csv (Genre definitions)
-│   ├── 📄 data_w_genres.csv (Songs with genres)
-│   └── 📄 data_by_year.csv (Temporal trends)
-└── 📈 analysis/
+    ├── 📄 data.csv (Main dataset)
+    ├── 📄 data_by_artists.csv (Artist metrics)
+    ├── 📄 data_genres.csv (Genre definitions)
+    ├── 📄 data_w_genres.csv (Songs with genres)
+    └── 📄 data_by_year.csv (Temporal trends)
+
 ```
 
 ## Audio Features
@@ -78,9 +78,9 @@ The analysis focuses on **8 critical audio features** and metadata fields:
 **Key Insights:**
 - **Bimodal Features**: Acousticness and Instrumentalness show clear categorical divisions
 - **Normal Distribution**: Danceability and Energy follow standard distributions
-- **Vocal Dominance**: Majority of tracks contain vocals (low instrumentalness)
+- **Vocal Dominance**: The majority of the tracks contain vocals (low instrumentalness)
 - **High Volume Mastering**: Most songs are mastered at high volumes
-- **Emotional Range**: Valence shows uniform distribution across emotional spectrum
+- **Emotional Range**: Valence shows uniform distribution across the emotional spectrum
 
 > **💡 Application**: These characteristics enable mood-based recommendations, energy-focused playlists, and vocal/instrumental filtering.
 
@@ -156,7 +156,7 @@ graph TD
 
 #### **Step 2: Selecting Representative Genres**
 - Calculated **Euclidean distances** between cluster centroids and all genres
-- Selected closest genre as **cluster representative**
+- Selected the closest genre as the **cluster representative**
 - Ensured each cluster maps to a prototypical genre
 
 #### **Step 3: Assigning Genres to Songs**
@@ -174,7 +174,7 @@ Five distinct recommendation systems provide tailored music suggestions for diff
 
 **🔍 How it Works:**
 - Calculates **cosine similarity** between song feature vectors
-- Ranks songs by acoustic similarity to input track
+- Ranks songs by acoustic similarity to the input track
 - Returns most sonically similar recommendations
 
 **✅ Strengths:**
@@ -190,9 +190,9 @@ Five distinct recommendation systems provide tailored music suggestions for diff
 ### 2. Genre-Based Recommendation
 
 **🔍 How it Works:**
-- Filters dataset by specified genre
+- Filters the dataset by the specified genre
 - Sorts by popularity within genre
-- Returns top tracks in category
+- Returns top tracks in the category
 
 **✅ Strengths:**
 - Quick genre exploration
@@ -233,6 +233,9 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 | **⚡ Energetic** | High energy + tempo | Energy: 85th percentile, Tempo: 75th percentile |
 | **😌 Calm** | Low energy + tempo | Energy: 30th percentile, Tempo: 40th percentile |
 | **💃 Danceable** | High danceability | Danceability: 75th percentile |
+| **💏 Romantic** | Moderate tempo | High valence | Moderate energy |
+| **👯 Party** | High danceability | High energy | High valence |
+| **📚  Focus or Study** | Low valence | Moderate energy | Instrumental preference |
 
 **✅ Strengths:**
 - Emotional and situational relevance
@@ -248,7 +251,8 @@ hybrid_score = (similarity_weight × similarity) + (popularity_weight × normali
 
 **How it Works:**
 - Filters by year range selection
-- Sorts by popularity within the timeframe
+- Sorts by parameters such as popularity, year, random, audio features(as defined in the analysis)
+- Defaults to sorting by popularity if no sort parameter is defined
 - Enables temporal music exploration
 
 **✅ Strengths:**
@@ -409,18 +413,9 @@ pip install -r requirements.txt
 │   ├── 📊 data_genres.csv
 │   ├── 📊 data_w_genres.csv
 │   └── 📊 data_by_year.csv
-├── 📁 src/
-│   ├── 🐍 data_preprocessing.py
-│   ├── 🐍 genre_classification.py
-│   ├── 🐍 recommendation_systems.py
-│   ├── 🐍 visualization.py
-│   └── 🐍 main.py
 ├── 📁 notebooks/
-│   ├── 📓 01_data_exploration.ipynb
-│   ├── 📓 02_genre_classification.ipynb
-│   ├── 📓 03_recommendation_systems.ipynb
-│   └── 📓 04_visualization_analysis.ipynb
-|── 📁 results/
+│   └── 📓 Spotify Music Recommendation.ipynb
+└── 📁 results/
     ├── 📈 correlation_matrix.png
     ├── 📊 feature_evolution.png
     └── 📉 popularity_trends.png
@@ -434,7 +429,5 @@ pip install -r requirements.txt
 - 📧 **Email**: [aniwurakehinde@gmail.com](mailto:aniwurakehinde@gmail.com)
 
 ---
-
-> **🎵 "Music is the universal language of mankind."** - Henry Wadsworth Longfellow
 
 **⭐ If you found this project helpful, please give it a star!**
