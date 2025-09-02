@@ -73,7 +73,7 @@ The analysis focuses on **8 critical audio features** and metadata fields:
 
 ## Data Analysis
 
-### 🎯 Feature Distribution
+### Feature Distribution
 
 **Key Insights:**
 - **Bimodal Features**: Acousticness and Instrumentalness show clear categorical divisions
